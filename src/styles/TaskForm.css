@@ -1,0 +1,74 @@
+.task-form {
+  background: #f9f9f9;
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-input {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.task-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.task-form-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.task-cancel-btn {
+  color: #666;
+  border-color: #d0d0d0;
+  background: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.task-cancel-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+  border-color: #999;
+}
+
+.task-submit-btn {
+  background: #667eea;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.task-submit-btn:hover {
+  background: #764ba2;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 576px) {
+  .task-form-buttons {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .task-cancel-btn,
+  .task-submit-btn {
+    width: 100%;
+  }
+}
