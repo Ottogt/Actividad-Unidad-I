@@ -123,23 +123,9 @@ Formulario para agregar nuevas tareas a una meta.
 ### TaskItem.js
 Componente individual de una tarea con opciones para completar o eliminar.
 
-## 🎯 Scripts Disponibles
 
-En el directorio del proyecto, puedes ejecutar:
 
-### `npm start`
-Inicia el servidor de desarrollo y abre la app en el navegador.
-
-### `npm run build`
-Crea una versión optimizada para producción en la carpeta `build`.
-
-### `npm test`
-Ejecuta los tests (si existen).
-
-### `npm run eject`
-Expone toda la configuración de Create React App (no se puede revertir).
-
-## 🌈 Paleta de Colores
+## Paleta de Colores
 
 - **Gradiente Principal**: #667eea a #764ba2 (Púrpura)
 - **Texto Primario**: #333
@@ -148,37 +134,4 @@ Expone toda la configuración de Create React App (no se puede revertir).
 - **Fondo Claro**: #f5f5f5
 - **Error**: #dc3545
 
-## 💡 Características Futuras
 
-- 📊 Estadísticas y gráficos de progreso
-- 🔔 Notificaciones de recordatorio
-- 💾 Persistencia en localStorage o base de datos
-- 🌙 Modo oscuro
-- 🏷️ Categorías de metas
-- 🔍 Búsqueda y filtrado
-- 📤 Exportar tareas a PDF
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo la licencia MIT.
-
-## 👤 Autor
-
-Creado como parte de la Actividad 1 de Desarrollo Web.
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor:
-1. Haz un Fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📞 Contacto y Soporte
-
-Si tienes preguntas o sugerencias, por favor abre un issue en el repositorio.
-
----
-
-**¡Gracias por usar Mis Metas y Tareas! ¡Que tengas éxito alcanzando tus metas! 🎉**
