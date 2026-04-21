@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Form, ListGroup, Row, Col } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import '../styles/GoalCard.css';
 import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
