@@ -1,0 +1,82 @@
+// ============================================
+// VARIABLES GLOBALES - COLORES DEL DISEÑO EXACTO
+// ============================================
+
+// HEADER - Oscuro/Negro
+$color-header-bg: #1a1a2e;
+$color-header-text: #ffffff;
+
+// FONDO PRINCIPAL - BLANCO
+$color-bg-main: #ffffff;
+
+// METAS (Tarjetas) - VERDE MENTA
+$color-meta-bg: #7fecb3;
+$color-meta-bg-light: #a3f7c7;
+
+// BOTONES - Púrpura
+$color-btn-primary: #667eea;
+$color-btn-primary-dark: #764ba2;
+
+// COLORES NEUTROS
+$color-white: #ffffff;
+$color-light-bg: #f8f9fa;
+$color-gray-light: #f5f5f5;
+$color-gray: #666666;
+$color-dark: #333333;
+$color-border: #d0d0d0;
+
+// COLORES DE ESTADO
+$color-danger: #dc3545;
+$color-danger-hover: #c82333;
+
+// ============================================
+// MIXINS REUTILIZABLES
+// ============================================
+
+@mixin gradient-btn {
+  background: linear-gradient(135deg, $color-btn-primary 0%, $color-btn-primary-dark 100%);
+}
+
+@mixin meta-header-bg {
+  background: $color-meta-bg;
+}
+
+@mixin box-shadow-small {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin box-shadow-medium {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin transition-fast {
+  transition: all 0.2s ease;
+}
+
+@mixin focus-state {
+  border-color: $color-btn-primary;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  outline: none;
+}
+
+@mixin media-mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (max-width: 991px) {
+    @content;
+  }
+}

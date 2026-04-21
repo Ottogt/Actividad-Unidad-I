@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import '../styles/TaskItem.css';
+import '../styles/TaskItem.scss';
 
 function TaskItem({ task, onDelete, onToggle }) {
   const formatDate = (dateString) => {
@@ -32,7 +32,7 @@ function TaskItem({ task, onDelete, onToggle }) {
         onClick={onDelete}
         title="Eliminar tarea"
       >
-        ✕
+        ×
       </Button>
     </div>
   );

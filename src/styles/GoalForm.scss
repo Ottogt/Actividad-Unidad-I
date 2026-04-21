@@ -1,0 +1,91 @@
+@import './variables';
+
+.goal-modal {
+  .modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.modal-header-custom {
+  @include gradient-btn;
+  color: $color-white;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  padding: 1.5rem;
+
+  .modal-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-close {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.form-label {
+  font-weight: 600;
+  color: $color-dark;
+  margin-bottom: 0.5rem;
+}
+
+.form-control-custom {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  @include transition-fast;
+
+  &:focus {
+    @include focus-state;
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #e9ecef;
+  }
+}
+
+.submit-btn {
+  @include gradient-btn;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+}
+
+@include media-mobile {
+  .modal-header-custom {
+    padding: 1rem;
+
+    .modal-title {
+      font-size: 1.1rem;
+    }
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}

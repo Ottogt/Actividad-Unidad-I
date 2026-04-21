@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Form, Button } from 'react-bootstrap';
-import '../styles/GoalForm.css';
+import '../styles/GoalForm.scss';
 
 function GoalForm({ show, handleClose, handleAddGoal }) {
   const [formData, setFormData] = useState({

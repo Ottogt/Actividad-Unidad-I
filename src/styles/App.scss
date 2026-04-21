@@ -1,0 +1,175 @@
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  background: $color-bg-main;
+  min-height: 100vh;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $color-bg-main;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+
+// LAYOUT PRINCIPAL - 2 COLUMNAS
+.content-row {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+// COLUMNA 1 - FORMULARIO (izquierda, fijo)
+.form-section {
+  flex: 0 0 350px;
+  position: sticky;
+  top: 2rem;
+}
+
+.form-wrapper {
+  background: $color-white;
+  width: 100%;
+}
+
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-input {
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  @include transition-fast;
+
+  &:focus {
+    @include focus-state;
+  }
+}
+
+.add-goal-btn {
+  @include gradient-btn;
+  border: none;
+  color: $color-white;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  @include transition;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  width: fit-content;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+}
+
+// COLUMNA 2 - METAS (derecha, apiladas verticalmente)
+.goals-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.no-goals {
+  background: $color-gray-light;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: $color-gray;
+  font-size: 1rem;
+}
+
+// MOBILE
+.mobile-add-btn {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.add-goal-mobile-btn {
+  @include gradient-btn;
+  border: none;
+  color: $color-white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  @include transition;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+}
+
+// RESPONSIVE
+@include media-tablet {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .content-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-section {
+    flex: none;
+    width: 100%;
+    position: static;
+    display: none;
+  }
+
+  .goals-section {
+    width: 100%;
+  }
+
+  .mobile-add-btn {
+    display: block;
+  }
+}
+
+@include media-mobile {
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  .mobile-add-btn {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

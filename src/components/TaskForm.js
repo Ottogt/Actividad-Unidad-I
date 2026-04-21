@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import '../styles/TaskForm.css';
+import '../styles/TaskForm.scss';
 
 function TaskForm({ goalId, onAddTask, onCancel }) {
   const [taskData, setTaskData] = useState({
@@ -28,7 +28,7 @@ function TaskForm({ goalId, onAddTask, onCancel }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="task-form mb-3 p-3">
+    <Form onSubmit={handleSubmit} className="task-form">
       <Form.Group className="mb-2">
         <Form.Control
           type="text"
