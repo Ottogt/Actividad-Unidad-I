@@ -95,11 +95,62 @@
 }
 
 .goal-progress-section {
-  display: none;
+  .progress-label {
+    font-size: 0.82rem;
+    color: $color-dark;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+  }
+
+  .goal-progress-bar {
+    height: 8px;
+    border-radius: 4px;
+  }
 }
 
-.goal-tasks-section {
-  display: none;
+.tasks-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 0.75rem;
+
+  .tasks-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    .tasks-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: $color-dark;
+    }
+
+    .add-task-btn {
+      @include gradient-btn;
+      border: none;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      color: $color-white;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .no-tasks-msg {
+    font-size: 0.82rem;
+    color: #888;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
 }
 
 .btn-eliminar {

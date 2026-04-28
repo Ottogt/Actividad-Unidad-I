@@ -28,6 +28,7 @@ function App() {
       const newGoal = {
         id: Date.now(),
         ...formData,
+        tasks: [],
         createdAt: new Date()
       };
       setGoals([...goals, newGoal]);
@@ -42,6 +43,41 @@ function App() {
 
   const handleDeleteGoal = (goalId) => {
     setGoals(goals.filter(goal => goal.id !== goalId));
+  };
+
+  const handleAddTask = (goalId, taskData) => {
+    const newTask = {
+      id: Date.now(),
+      ...taskData,
+      completed: false,
+      createdAt: new Date()
+    };
+    setGoals(goals.map(goal =>
+      goal.id === goalId
+        ? { ...goal, tasks: [...goal.tasks, newTask] }
+        : goal
+    ));
+  };
+
+  const handleDeleteTask = (goalId, taskId) => {
+    setGoals(goals.map(goal =>
+      goal.id === goalId
+        ? { ...goal, tasks: goal.tasks.filter(task => task.id !== taskId) }
+        : goal
+    ));
+  };
+
+  const handleToggleTask = (goalId, taskId) => {
+    setGoals(goals.map(goal =>
+      goal.id === goalId
+        ? {
+            ...goal,
+            tasks: goal.tasks.map(task =>
+              task.id === taskId ? { ...task, completed: !task.completed } : task
+            )
+          }
+        : goal
+    ));
   };
 
   return (
@@ -112,6 +148,9 @@ function App() {
                     key={goal.id}
                     goal={goal}
                     onDeleteGoal={handleDeleteGoal}
+                    onAddTask={handleAddTask}
+                    onDeleteTask={handleDeleteTask}
+                    onToggleTask={handleToggleTask}
                   />
                 ))}
               </div>
